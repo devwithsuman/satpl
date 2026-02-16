@@ -45,7 +45,7 @@ if (registrationForm) {
 
         const options = {
             key: RAZORPAY_KEY_ID,
-            amount: 105 * 100,
+            amount: 1 * 100,
             currency: "INR",
             name: "SATPL 2026",
             description: "Registration Fee",
