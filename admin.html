@@ -3,41 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Panel</title>
+    <title>Player Registration Management</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="#dashboard">Dashboard</a></li>
-            <li><a href="#players">Player Management</a></li>
-            <li><a href="#settings">Settings</a></li>
-            <li><a href="#logout">Logout</a></li>
-        </ul>
-    </nav>
-    <div id="dashboard">
-        <h1>Dashboard</h1>
-        <p>Overview of your application statistics and activities.</p>
-    </div>
-    <div id="players">
-        <h2>Player Registration Management</h2>
-        <form action="#" method="post">
-            <label for="player-name">Player Name:</label>
-            <input type="text" id="player-name" name="player-name" required>
-            <label for="player-email">Player Email:</label>
-            <input type="email" id="player-email" name="player-email" required>
-            <input type="submit" value="Register Player">
-        </form>
-        <h3>Registered Players</h3>
-        <ul>
-            <li>Player 1</li>
-            <li>Player 2</li>
-            <li>Player 3</li>
-        </ul>
-    </div>
-    <div id="settings">
-        <h2>Settings</h2>
-        <p>Manage your settings here.</p>
-    </div>
+    <header>
+        <h1>Admin Dashboard</h1>
+        <nav>
+            <ul>
+                <li><a href="#register">Register Player</a></li>
+                <li><a href="#players">View Players</a></li>
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#logout">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="register">
+            <h2>Player Registration</h2>
+            <form id="registration-form" enctype="multipart/form-data">
+                <label for="player-name">Player Name:</label>
+                <input type="text" id="player-name" name="playerName" required>
+
+                <label for="photo">Upload Photo:</label>
+                <input type="file" id="photo" name="photo" accept="image/*" required>
+
+                <label for="registration-number">Registration Number:</label>
+                <input type="text" id="registration-number" name="registrationNumber" readonly>
+
+                <label for="payment-status">Payment Status:</label>
+                <select id="payment-status" name="paymentStatus">
+                    <option value="paid">Paid</option>
+                    <option value="pending">Pending</option>
+                    <option value="failed">Failed</option>
+                </select>
+
+                <button type="submit">Register Player</button>
+            </form>
+        </section>
+
+        <section id="players">
+            <h2>All Registered Players</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Player Name</th>
+                        <th>Photo</th>
+                        <th>Registration Number</th>
+                        <th>Payment Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Dynamically populate with registered players data -->
+                </tbody>
+            </table>
+        </section>
+
+        <section id="dashboard">
+            <h2>Dashboard</h2>
+            <p>Welcome to the admin dashboard!</p>
+            <p>You can manage players, view statistics, and more.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Player Registration Management System</p>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
