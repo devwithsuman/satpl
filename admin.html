@@ -1,2 +1,43 @@
-<h2>Player Registration Management</h2>
-<p>Manage player registrations, including adding, editing, and removing players.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#dashboard">Dashboard</a></li>
+            <li><a href="#players">Player Management</a></li>
+            <li><a href="#settings">Settings</a></li>
+            <li><a href="#logout">Logout</a></li>
+        </ul>
+    </nav>
+    <div id="dashboard">
+        <h1>Dashboard</h1>
+        <p>Overview of your application statistics and activities.</p>
+    </div>
+    <div id="players">
+        <h2>Player Registration Management</h2>
+        <form action="#" method="post">
+            <label for="player-name">Player Name:</label>
+            <input type="text" id="player-name" name="player-name" required>
+            <label for="player-email">Player Email:</label>
+            <input type="email" id="player-email" name="player-email" required>
+            <input type="submit" value="Register Player">
+        </form>
+        <h3>Registered Players</h3>
+        <ul>
+            <li>Player 1</li>
+            <li>Player 2</li>
+            <li>Player 3</li>
+        </ul>
+    </div>
+    <div id="settings">
+        <h2>Settings</h2>
+        <p>Manage your settings here.</p>
+    </div>
+</body>
+</html>
